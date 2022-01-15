@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+}
+
+repositories {
+    mavenCentral()
+}
+
+
+
+// если например мы готовим тесты на Linux или ещё на какой то другой ОС,
+// отличной от Windows, то при запуске на Windows мы получаем ошибку кодировки
+//compileTestJava {
+//options.encoding = 'UTF-8'
+//}
+
+dependencies {
+    //Selenide
+    testImplementation 'com.codeborne:selenide:6.1.2'
+    //добавляем библеотеку для логирования, увеличивает кол-во полезного вывода вспомогательной информации
+    testRuntimeOnly "org.slf4j:slf4j-simple:1.7.32"
+
+    //junit 5
+    testImplementation 'org.junit.jupiter:junit-jupiter:5.8.2'
+    testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.8.2'
+
+}
+
+
+//что-то про напоминалку ,если мы запустим несуществующие тесты
+test {
+    useJUnitPlatform()
+}
