@@ -46,11 +46,11 @@ public class SearchSelenideWiki {
         $(".wiki-more-pages-link button").pressEnter();
 
         // Убеждаемся, что в списке страниц (Pages) есть страница SoftAssertions, кликаем на неё
-        $(".Layout-main").scrollTo().$(byText("Soft assertions")).click();
+        //$(".Layout-main").scrollTo().$(byText("Soft assertions")).click();
         //$(".js-wiki-more-pages-link").click();
         $(byText("SoftAssertions")).click();
 
-        // проверяем ,что внутри SoftAssertions есть пример кода для JUnit5
+        // проверяем,что внутри SoftAssertions есть пример кода для JUnit5
         $("#wiki-body").shouldHave(text("Using JUnit5 extend test class:"));
 
     }
