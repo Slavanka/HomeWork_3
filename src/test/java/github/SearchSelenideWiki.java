@@ -28,7 +28,7 @@ import static com.codeborne.selenide.Selenide.open;
 
 public class SearchSelenideWiki {
     @Test
-    void shouldFindeSelenideWiki(){
+    void shouldFindSelenideWiki(){
         // открыть страницу github.com
         open("https://github.com/");
 
